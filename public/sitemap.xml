@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://vimovies.app/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://www.vimovies.online/</loc><lastmod>2026-07-06</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.vimovies.online/blog/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.vimovies.online/blog/how-to-install-vimovies/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/blog/vimovies-review/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/blog/vimovies-vs-stremio/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/blog/best-free-movie-apps-2026/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/blog/movie-apps-for-android-tv/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/blog/free-movie-app-for-google-tv/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/blog/best-streaming-apps-without-subscription/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/blog/best-apps-like-netflix/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/about/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.vimovies.online/contact/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.vimovies.online/privacy-policy/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.vimovies.online/terms/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.vimovies.online/dmca/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
 </urlset>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vimovies.app/sitemap.xml
+Sitemap: https://www.vimovies.online/sitemap.xml
