@@ -9,14 +9,14 @@ TODAY = "2026-07-06"
 
 CSS = """
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a0f;color:#d5d9e2;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.75;font-size:17px}
-a{color:#7c5cff;text-decoration:none}a:hover{text-decoration:underline}
-header{border-bottom:1px solid #1c1c28;background:#0d0d14}
+body{background:#050505;color:#d1d5db;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.75;font-size:17px}
+a{color:#9ca3af;text-decoration:none;transition:color .2s}a:hover{color:#ef4444;text-decoration:underline}
+header{border-bottom:1px solid rgba(255,255,255,.06);background:#0a0a0a}
 .nav{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 .nav img{width:34px;height:34px;border-radius:8px}
 .nav .brand{font-weight:800;color:#fff;font-size:19px}
-.nav a{color:#aab;font-size:15px}
-main{max-width:860px;margin:0 auto;padding:34px 20px 60px}
+.nav a{color:#9ca3af;font-size:15px}.nav a:hover{color:#fff;text-decoration:none}
+main{max-width:860px;margin:0 auto;padding:34px 20px 60px}main a{color:#e5e7eb;text-decoration:underline;text-decoration-color:rgba(239,68,68,.5);text-underline-offset:3px}main a:hover{color:#ef4444}
 .crumbs{font-size:13px;color:#667;margin-bottom:22px}
 h1{color:#fff;font-size:34px;line-height:1.25;margin-bottom:10px}
 .meta{color:#778;font-size:14px;margin-bottom:28px}
@@ -26,17 +26,17 @@ p{margin:0 0 16px}
 ul,ol{margin:0 0 18px 24px}
 li{margin-bottom:8px}
 table{width:100%;border-collapse:collapse;margin:18px 0 24px;font-size:15px}
-th,td{border:1px solid #23233a;padding:10px 12px;text-align:left}
-th{background:#15151f;color:#fff}
-tr:nth-child(even){background:#10101a}
-.tip{background:#131325;border-left:4px solid #7c5cff;padding:14px 18px;border-radius:8px;margin:20px 0}
-.cta{display:inline-block;background:linear-gradient(135deg,#7c5cff,#5b3df5);color:#fff;font-weight:700;padding:13px 30px;border-radius:12px;margin:8px 0 20px}
-.cta:hover{text-decoration:none;opacity:.9}
+th,td{border:1px solid rgba(255,255,255,.08);padding:10px 12px;text-align:left}
+th{background:#111;color:#fff}
+tr:nth-child(even){background:#0c0c0c}
+.tip{background:rgba(220,38,38,.08);border-left:4px solid #dc2626;padding:14px 18px;border-radius:8px;margin:20px 0}
+.cta{display:inline-block;background:#dc2626;color:#fff !important;font-weight:700;padding:13px 30px;border-radius:9999px;margin:8px 0 20px;box-shadow:0 0 20px rgba(220,38,38,.4);text-decoration:none !important}
+.cta:hover{background:#b91c1c;color:#fff}
 .faq h3{margin-top:20px}
-.related{background:#0f0f18;border:1px solid #1c1c28;border-radius:14px;padding:20px 24px;margin-top:44px}
+.related{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px 24px;margin-top:44px}
 .related h2{margin-top:0;font-size:20px}
-footer{border-top:1px solid #1c1c28;background:#0d0d14;margin-top:40px}
-.foot{max-width:860px;margin:0 auto;padding:28px 20px;font-size:14px;color:#889}
+footer{border-top:1px solid rgba(255,255,255,.06);background:#0a0a0a;margin-top:40px}
+.foot{max-width:860px;margin:0 auto;padding:28px 20px;font-size:14px;color:#6b7280}.foot a{color:#9ca3af;text-decoration:none}.foot a:hover{color:#fff;text-decoration:none}
 .foot .cols{display:flex;gap:48px;flex-wrap:wrap;margin-bottom:18px}
 .foot h4{color:#fff;margin-bottom:8px;font-size:14px}
 .foot ul{list-style:none;margin:0}
