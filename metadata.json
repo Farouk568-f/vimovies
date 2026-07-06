@@ -1,6 +1,6 @@
 {
-  "name": "Vetrix - TV & Movie Platform",
-  "description": "Premium download and streaming showcase site for the Vetrix TV & Mobile App, featuring an interactive Web Player, APK Download center, and TV Remote simulator.",
+  "name": "ViMovies - TV & Movie App Platform",
+  "description": "Official download site for the ViMovies app: stream movies, TV series, and anime in HD on Android TV and Google TV, with an install guide, features, and FAQ.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
