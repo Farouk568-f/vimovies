@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.vimovies.online/</loc><lastmod>2026-07-06</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.vimovies.online/download/</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.vimovies.online/install/</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.vimovies.online/android-tv/</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.vimovies.online/google-tv/</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.vimovies.online/firestick/</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.vimovies.online/features/</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.vimovies.online/faq/</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.vimovies.online/alternatives/</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.vimovies.online/changelog/</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
   <url><loc>https://www.vimovies.online/blog/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.vimovies.online/blog/how-to-install-vimovies/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.vimovies.online/blog/vimovies-review/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
@@ -10,9 +19,13 @@
   <url><loc>https://www.vimovies.online/blog/free-movie-app-for-google-tv/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.vimovies.online/blog/best-streaming-apps-without-subscription/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.vimovies.online/blog/best-apps-like-netflix/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.vimovies.online/about/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.vimovies.online/contact/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.vimovies.online/privacy-policy/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.vimovies.online/terms/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.vimovies.online/dmca/</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.vimovies.online/blog/vimovies-not-working-fix/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/blog/is-vimovies-safe/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/blog/how-to-sideload-apps-google-tv/</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.vimovies.online/about/</loc><lastmod>2026-07-06</lastmod><priority>0.4</priority></url>
+  <url><loc>https://www.vimovies.online/contact/</loc><lastmod>2026-07-06</lastmod><priority>0.4</priority></url>
+  <url><loc>https://www.vimovies.online/privacy-policy/</loc><lastmod>2026-07-06</lastmod><priority>0.4</priority></url>
+  <url><loc>https://www.vimovies.online/terms/</loc><lastmod>2026-07-06</lastmod><priority>0.4</priority></url>
+  <url><loc>https://www.vimovies.online/dmca/</loc><lastmod>2026-07-06</lastmod><priority>0.4</priority></url>
+  <url><loc>https://www.vimovies.online/disclaimer/</loc><lastmod>2026-07-06</lastmod><priority>0.4</priority></url>
 </urlset>

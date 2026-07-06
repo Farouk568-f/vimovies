@@ -84,9 +84,11 @@ export default function App() {
           </span>
         </a>
         <nav aria-label="Main navigation" className="hidden sm:flex items-center gap-6 text-sm text-neutral-400">
-          <a href="#install" className="hover:text-white transition-colors">How to Install</a>
-          <a href="#features" className="hover:text-white transition-colors">Features</a>
-          <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+          <a href="/download/" className="hover:text-white transition-colors">Download</a>
+          <a href="/install/" className="hover:text-white transition-colors">Install</a>
+          <a href="/features/" className="hover:text-white transition-colors">Features</a>
+          <a href="/blog/" className="hover:text-white transition-colors">Blog</a>
+          <a href="/faq/" className="hover:text-white transition-colors">FAQ</a>
         </nav>
       </header>
 
@@ -223,13 +225,49 @@ export default function App() {
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/5 mt-10">
-        <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-neutral-500">
-          <p>© {new Date().getFullYear()} ViMovies. All rights reserved.</p>
-          <nav aria-label="Footer navigation" className="flex items-center gap-6">
-            <a href="#install" className="hover:text-white transition-colors">Install Guide</a>
-            <a href="#features" className="hover:text-white transition-colors">Features</a>
-            <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+        <div className="max-w-5xl mx-auto px-6 py-10 text-sm text-neutral-500">
+          <nav aria-label="Footer navigation" className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8 text-left">
+            <div>
+              <h4 className="text-white font-semibold mb-2">App</h4>
+              <ul className="space-y-1">
+                <li><a href="/download/" className="hover:text-white transition-colors">Download APK</a></li>
+                <li><a href="/install/" className="hover:text-white transition-colors">Install Guide</a></li>
+                <li><a href="/features/" className="hover:text-white transition-colors">Features</a></li>
+                <li><a href="/changelog/" className="hover:text-white transition-colors">Changelog</a></li>
+                <li><a href="/faq/" className="hover:text-white transition-colors">FAQ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-2">Devices</h4>
+              <ul className="space-y-1">
+                <li><a href="/android-tv/" className="hover:text-white transition-colors">Android TV</a></li>
+                <li><a href="/google-tv/" className="hover:text-white transition-colors">Google TV</a></li>
+                <li><a href="/firestick/" className="hover:text-white transition-colors">Fire TV Stick</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-2">Guides</h4>
+              <ul className="space-y-1">
+                <li><a href="/blog/" className="hover:text-white transition-colors">Blog</a></li>
+                <li><a href="/blog/vimovies-review/" className="hover:text-white transition-colors">Review</a></li>
+                <li><a href="/blog/is-vimovies-safe/" className="hover:text-white transition-colors">Is ViMovies Safe?</a></li>
+                <li><a href="/alternatives/" className="hover:text-white transition-colors">Alternatives</a></li>
+                <li><a href="/blog/vimovies-not-working-fix/" className="hover:text-white transition-colors">Troubleshooting</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-2">Company</h4>
+              <ul className="space-y-1">
+                <li><a href="/about/" className="hover:text-white transition-colors">About</a></li>
+                <li><a href="/contact/" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="/dmca/" className="hover:text-white transition-colors">DMCA</a></li>
+                <li><a href="/privacy-policy/" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms/" className="hover:text-white transition-colors">Terms</a></li>
+                <li><a href="/disclaimer/" className="hover:text-white transition-colors">Disclaimer</a></li>
+              </ul>
+            </div>
           </nav>
+          <p className="text-center md:text-left">© {new Date().getFullYear()} ViMovies. All rights reserved. ViMovies does not host any media files.</p>
         </div>
       </footer>
     </div>

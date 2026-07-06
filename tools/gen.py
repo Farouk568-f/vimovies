@@ -46,9 +46,10 @@ img.hero{width:100%;border-radius:14px;margin:6px 0 26px}
 """
 
 FOOT_LINKS = [
-    ("Guides", [("/blog/how-to-install-vimovies/", "Install ViMovies"), ("/blog/free-movie-app-for-google-tv/", "Google TV Guide"), ("/blog/movie-apps-for-android-tv/", "Android TV Apps")]),
-    ("Reviews", [("/blog/vimovies-review/", "ViMovies Review"), ("/blog/vimovies-vs-stremio/", "ViMovies vs Stremio"), ("/blog/best-free-movie-apps-2026/", "Best Free Movie Apps")]),
-    ("Company", [("/about/", "About"), ("/contact/", "Contact"), ("/dmca/", "DMCA"), ("/privacy-policy/", "Privacy"), ("/terms/", "Terms")]),
+    ("App", [("/download/", "Download"), ("/install/", "Install Guide"), ("/features/", "Features"), ("/changelog/", "Changelog"), ("/faq/", "FAQ")]),
+    ("Devices", [("/android-tv/", "Android TV"), ("/google-tv/", "Google TV"), ("/firestick/", "Firestick"), ("/blog/how-to-sideload-apps-google-tv/", "Sideloading Guide")]),
+    ("Guides & Reviews", [("/blog/how-to-install-vimovies/", "Install ViMovies"), ("/blog/vimovies-review/", "ViMovies Review"), ("/alternatives/", "Alternatives"), ("/blog/is-vimovies-safe/", "Is ViMovies Safe?"), ("/blog/vimovies-not-working-fix/", "Troubleshooting")]),
+    ("Company", [("/about/", "About"), ("/contact/", "Contact"), ("/dmca/", "DMCA"), ("/privacy-policy/", "Privacy"), ("/terms/", "Terms"), ("/disclaimer/", "Disclaimer")]),
 ]
 
 def esc(s): return html.escape(s, quote=True)
@@ -115,6 +116,7 @@ def page(slug, title, desc, h1, body, faqs=None, is_article=True, crumb=None, re
 <meta name="twitter:title" content="{esc(title)}" />
 <meta name="twitter:description" content="{esc(desc)}" />
 <meta name="twitter:image" content="{LOGO}" />
+<link rel="alternate" type="application/rss+xml" title="ViMovies Blog" href="{SITE}/feed.xml" />
 <style>{CSS}</style>
 {schema_html}
 </head>
@@ -122,10 +124,11 @@ def page(slug, title, desc, h1, body, faqs=None, is_article=True, crumb=None, re
 <header><nav class="nav">
 <a href="/" aria-label="ViMovies home"><img src="{LOGO}" alt="ViMovies app logo" width="34" height="34" /></a>
 <a href="/" class="brand">ViMovies</a>
+<a href="/download/">Download</a>
+<a href="/install/">Install</a>
+<a href="/features/">Features</a>
 <a href="/blog/">Blog</a>
-<a href="/blog/how-to-install-vimovies/">Install Guide</a>
-<a href="/blog/vimovies-review/">Review</a>
-<a href="/about/">About</a>
+<a href="/faq/">FAQ</a>
 </nav></header>
 <main>
 {crumb_html}
@@ -151,7 +154,15 @@ def page(slug, title, desc, h1, body, faqs=None, is_article=True, crumb=None, re
 
 if __name__ == "__main__":
     from articles import ARTICLES, LEGAL
+    from articles3 import ARTICLES3
+    from pages import PAGES, P_DISCLAIMER
+    ARTICLES = ARTICLES + ARTICLES3
+    LEGAL = LEGAL + [P_DISCLAIMER]
     urls = [SITE + "/"]
+    # landing pages
+    for a in PAGES:
+        urls.append(page(a["slug"], a["title"], a["desc"], a["h1"], a["body"],
+             faqs=a.get("faqs"), related=a.get("related"), is_article=False))
     # blog index
     cards = "".join(
         f'<h2><a href="/blog/{a["slug"].split("/",1)[1]}/">{esc(a["h1"])}</a></h2><p>{esc(a["desc"])}</p>'
@@ -167,11 +178,44 @@ if __name__ == "__main__":
     for a in LEGAL:
         urls.append(page(a["slug"], a["title"], a["desc"], a["h1"], a["body"], is_article=False))
     # sitemap
+    landing = {SITE + "/" + p["slug"] + "/" for p in PAGES}
+    legal_urls = {SITE + "/" + a["slug"] + "/" for a in LEGAL} | {SITE + "/about/", SITE + "/contact/"}
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     for u in urls:
-        pr = "1.0" if u.rstrip("/") == SITE else ("0.8" if "/blog/" in u and u.rstrip("/") != SITE + "/blog" else "0.6")
+        if u.rstrip("/") == SITE:
+            pr = "1.0"
+        elif u in landing:
+            pr = "0.9"
+        elif "/blog/" in u and u.rstrip("/") != SITE + "/blog":
+            pr = "0.8"
+        elif u in legal_urls:
+            pr = "0.4"
+        else:
+            pr = "0.6"
         sm += f"  <url><loc>{u}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority></url>\n"
     sm += "</urlset>\n"
     with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
         f.write(sm)
-    print(f"Generated {len(urls)} URLs")
+    # RSS feed
+    rss_items = ""
+    for a in ARTICLES:
+        u = f"{SITE}/{a['slug']}/"
+        rss_items += (f"    <item>\n      <title>{esc(a['h1'])}</title>\n      <link>{u}</link>\n"
+                      f"      <guid isPermaLink=\"true\">{u}</guid>\n"
+                      f"      <description>{esc(a['desc'])}</description>\n"
+                      f"      <pubDate>Mon, 06 Jul 2026 09:00:00 GMT</pubDate>\n    </item>\n")
+    rss = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ViMovies Blog</title>
+    <link>{SITE}/blog/</link>
+    <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Streaming guides, reviews, and Android TV / Google TV tips from the ViMovies team.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jul 2026 09:00:00 GMT</lastBuildDate>
+{rss_items}  </channel>
+</rss>
+"""
+    with open(os.path.join(OUT, "feed.xml"), "w") as f:
+        f.write(rss)
+    print(f"Generated {len(urls)} URLs + sitemap.xml + feed.xml")
