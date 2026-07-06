@@ -1,0 +1,6 @@
+{
+  "name": "Vetrix - TV & Movie Platform",
+  "description": "Premium download and streaming showcase site for the Vetrix TV & Mobile App, featuring an interactive Web Player, APK Download center, and TV Remote simulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
